@@ -1,0 +1,22 @@
+{
+  "name": "node-handlebars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pepka.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MishaPepyaka/pepka.git"
+  },
+  "author": "Mikhail Shumilov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MishaPepyaka/pepka/issues"
+  },
+  "homepage": "https://github.com/MishaPepyaka/pepka#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
