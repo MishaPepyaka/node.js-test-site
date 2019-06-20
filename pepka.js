@@ -9,14 +9,33 @@ var handlebars = require('express-handlebars')
 app.engine('handlebars', handlebars.engine);
 app.set('view engine','handlebars');
 
+// предсказания
+
+var fortunes = [
+    "Победи свои страхи или они победят тебя",
+    "Рекам нужны истоки",
+    "Не бойся неведомого",
+    "Тебя ждёт приятный сюрприз",
+    "Будь проще везде, где только можно."
+];
+
 app.set('port', process.env.PORT || 3000);
+
+// public
+
+app.use(express.static(__dirname + '/public'));
+
+// home
 
 app.get('/', function (req, res) {
     res.render('home');
 });
 
+// home
+
 app.get('/about', function (req, res) {
-    res.render('about');
+    var randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+    res.render('about', {fortune: randomFortune});
 });
 
 // пользовательская страница 404
